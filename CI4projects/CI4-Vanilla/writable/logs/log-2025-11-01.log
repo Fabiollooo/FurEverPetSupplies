@@ -1,0 +1,32 @@
+CRITICAL - 2025-11-01 19:11:17 --> ErrorException: Undefined variable $products
+[Method: GET, Route: itemshop]
+in APPPATH\Views\itemshop.php on line 48.
+ 1 APPPATH\Views\itemshop.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\itemshop.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\itemshop.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('itemshop', [], true)
+ 5 APPPATH\Controllers\ItemShopController.php(9): view('itemshop')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemShopController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemShopController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-01 19:11:31 --> ErrorException: Undefined variable $products
+[Method: GET, Route: itemshop]
+in APPPATH\Views\itemshop.php on line 48.
+ 1 APPPATH\Views\itemshop.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\itemshop.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\itemshop.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('itemshop', [], true)
+ 5 APPPATH\Controllers\ItemShopController.php(9): view('itemshop')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemShopController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemShopController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-01 19:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-01 19:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-01 19:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-01 19:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
