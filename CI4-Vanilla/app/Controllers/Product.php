@@ -6,10 +6,13 @@ use App\Models\ProductModel;
 
 class Product extends BaseController
 {
-    public function index()
+    public function index2()
     {
         $model = new ProductModel();
         $data['products'] = $model->findAll();
-        return view('product/index', $data);
+        return view('templates/header')
+         . view('product/itemshop', $data)
+         . view('templates/footer'); 
     }
 }
+

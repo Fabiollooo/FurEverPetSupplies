@@ -9,6 +9,8 @@ class ItemShopController extends BaseController
     {
         $model = new ProductModel();
         $data['products'] = $model->findAll(); 
-        return view('itemshop', $data);
+        return view('templates/header')
+         . view('itemshop', $data)
+         . view('templates/footer');
     }
 }

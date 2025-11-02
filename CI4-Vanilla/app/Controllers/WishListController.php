@@ -6,6 +6,8 @@ use App\Models\ProductModel;
 
 class WishlistController extends BaseController
 {
+    //Fix the templates in cart & wishlist
+
     public function add()
     {
         $session = session();

@@ -6,33 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Furever Pet Supplies</title>
   <link rel="stylesheet" href="../public/assets/styles/style.css">
-
-  
 </head>
 <!-- Now when i think about it, i will move the contents of this version's MainPage to its own page of "About Me". 
     And instead on the main page i will have just like categories of which the user may press and then it will bring the user to the "itemshop" page with the appropiate items of the given pressed category -->
 
 
 <body>
-  <header class="site-header">
-    <div class="container header-container">
-      <img src="../public/assets/images/site/logo.png" alt="logo" class="store-logo">
-
-      <nav class="main-navigation">
-        <ul class="nav-list">
-          <li><a href="<?= base_url('/') ?>">Home</a></li>
-          <li><a href="<?= base_url('itemshop')?>">Shop</a></li>
-          <!-- <li><a href="#">About</a></li> -->
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="cart-button">
-        <a href="<?= base_url('cart')?>">Cart</a>
-        <a href="<?= base_url('wishlist')?>">&#10084</a>
-      </div>
-    </div>
-  </header>
-
   <section class="hero-section">
     <div class="container hero-content">
       <h2>Your One-Stop Pet Supply Shop</h2>
