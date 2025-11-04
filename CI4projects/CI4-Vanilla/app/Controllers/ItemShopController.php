@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Controllers;
+use App\Models\ProductModel;
+
+class ItemShopController extends BaseController
+{
+    public function index2()
+    {
+        $model = new ProductModel();
+        $data['products'] = $model->findAll(); 
+        return view('templates/header')
+         . view('itemshop', $data)
+         . view('templates/footer');
+    }
+}
