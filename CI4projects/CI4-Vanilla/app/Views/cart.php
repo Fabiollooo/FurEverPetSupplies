@@ -11,38 +11,39 @@
 <div class="container">
 <h2>Your Cart</h2>
 
-<?php
-if (empty($products)) {
-    echo "<p>Your cart is empty.</p>";
-} else {
-    echo '<div class="cart-container">';
-    foreach ($products as $product) {
-        echo '<div class="cart-item">';
-        //echo '<img src="' . base_url('uploads/'.$product['prodPhoto']) . '" alt="' . $product['prodDescription'] . '" class="cart-image">';
-        echo '<div class="cart-details">';
-        echo '<p class="cart-name">' . $product['prodDescription'] . '</p>';
-        echo '<p class="cart-price">€' . $product['prodSalePrice'] . '</p>';
-        //Add possible quantity as the user may want to purchase more that only one item
+    <?php if (empty($products)): ?>
+        <p>Your cart is empty.</p>
+    <?php else: ?>
+        <div class="cart-container">
+            <?php foreach ($products as $product): ?>
+                <div class="cart-item">
+                    <div class="cart-details">
+                        <p class="cart-name"><?= $product['prodDescription'] ?></p>
+                        <p class="cart-price">€<?= $product['prodSalePrice'] ?></p>
+                        <form action="<?= base_url('cart/remove') ?>" method="post">
+                            <input type="hidden" name="product_id" value="<?= $product['prodCode'] ?>">
+                            <button type="submit" class="btn-remove">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
 
-        
-        //Remove btn
-        echo '<form action="' . base_url('cart/remove') . '" method="post">';
-        echo '<input type="hidden" name="product_id" value="' . $product['prodCode'] . '">';
-        echo '<button type="submit" class="btn-remove">Remove</button>';
-        echo '</form>';
-        echo '</div></div>';
-    }
-    echo '</div>';
+        <?php 
+            $total = 0;
+            foreach ($products as $product) {
+                $total += $product['prodSalePrice'];
+            }
+        ?>
+        <hr>
+        <div class="cart-total">
+            <p><strong>Total: €<?= number_format($total, 2) ?></strong></p>
+        </div>
+    <?php endif; ?>
 
-    $total = 0;
-    foreach ($products as $product) {
-        $total += $product['prodSalePrice'];
-    }
-    echo '<hr>';
-    echo '<div class="cart-total"><p><strong>Total: €' . number_format($total, 2) . '</strong></p></div>';
-}
-?>
 </div>
+<!-- FIX: Buttons get progressivly mis-aligned for some random reason ;( -->
+
 </body>
 </html>
 

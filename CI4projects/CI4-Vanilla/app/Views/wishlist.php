@@ -7,41 +7,32 @@
   <link rel="stylesheet" href="<?= base_url('assets/styles/style.css') ?>">
 </head>
 
+<?php if (empty($products)): ?>
+    <p>Your wishlist is empty.</p>
+<?php else: ?>
+    <div class="cart-container">
+        <?php foreach ($products as $product): ?>
+            <div class="cart-item">
+                <div class="cart-details">
+                    <p class="cart-name"><?= $product['prodDescription'] ?></p>
+                    <p class="cart-price">€<?= $product['prodSalePrice'] ?></p>
 
-<div class="container">
- <h2>Your Wishlist</h2>
+                    <form action="<?= base_url('cart/add') ?>" method="post" style="display:inline-block; margin-right:10px;">
+                        <input type="hidden" name="product_id" value="<?= $product['prodCode'] ?>">
+                        <button type="submit" class="btn-add-to-cart">Add to Cart</button>
+                    </form>
 
-    <?php
-    if (empty($products)) {
-        echo "<p>Your wishlist is empty.</p>";
-    } else {
-        echo '<div class="cart-container">';
-        foreach ($products as $product) {
-            echo '<div class="cart-item">';
-            //echo '<img src="' . base_url('uploads/'.$product['prodPhoto']) . '" alt="' . $product['prodDescription'] . '" class="cart-image">';
-            //figure out the story with images on products !
-            echo '<div class="cart-details">';
-            echo '<p class="cart-name">' . $product['prodDescription'] . '</p>';
-            echo '<p class="cart-price">€' . $product['prodSalePrice'] . '</p>';
+                    <form action="<?= base_url('wishlist/remove') ?>" method="post" style="display:inline-block;">
+                        <input type="hidden" name="product_id" value="<?= $product['prodCode'] ?>">
+                        <button type="submit" class="btn-remove">Remove</button>
+                    </form>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
 
-            // Add to Cart btn
-            echo '<form action="' . base_url('cart/add') . '" method="post" style="display:inline-block;margin-right:10px;">';
-            echo '<input type="hidden" name="product_id" value="' . $product['prodCode'] . '">';
-            echo '<button type="submit" class="btn-add-to-cart">Add to Cart</button>';
-            echo '</form>';
+<!-- FIX: Buttons get progressivly mis-aligned for some random reason ;( -->
 
-            // Remove btn
-            echo '<form action="' . base_url('wishlist/remove') . '" method="post" style="display:inline-block;">';
-            echo '<input type="hidden" name="product_id" value="' . $product['prodCode'] . '">';
-            echo '<button type="submit" class="btn-remove">Remove</button>';
-            echo '</form>';
-
-            echo '</div></div>';
-        }
-        echo '</div>';
-    }
-    ?>
-
-</div>
 </body>
 </html>
