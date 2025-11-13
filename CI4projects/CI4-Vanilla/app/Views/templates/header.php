@@ -16,9 +16,9 @@
       <nav class="main-navigation">
         <ul class="nav-list">
           <li><a href="<?= base_url('/') ?>">Home</a></li>
+          <li><a href="<?= base_url('aboutUs')?>">About Us</a></li>
           <li><a href="<?= base_url('itemshop')?>">Shop</a></li>
-          <!-- <li><a href="#">About</a></li> -->
-          <li><a href="#">Contact</a></li>
+          <li><a href="<?= base_url('MainPage')?>#form_contactME">Contact</a></li> <!-- Scroll not working -->
         </ul>
       </nav>
       <div class="cart-button">

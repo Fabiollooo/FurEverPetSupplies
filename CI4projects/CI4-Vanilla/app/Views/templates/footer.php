@@ -17,9 +17,9 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="<?= base_url('/') ?>">Home</a></li>
+          <li><a href="<?= base_url('aboutUs')?>">About Us</a></li>
           <li><a href="<?= base_url('itemshop')?>">Shop</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="<?= base_url('itemshop#')?>">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">

@@ -12,6 +12,9 @@ $routes->get('product', 'Product::index2');
 $routes->get('itemshop', 'ItemShopController::index2');
 $routes->get('MainPage', 'Home2::index2');
 
+//AboutUs
+$routes->get('aboutUs', 'AboutUsController::index2');
+
 
 
 //Cart

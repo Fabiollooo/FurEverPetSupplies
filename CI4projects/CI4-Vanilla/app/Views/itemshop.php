@@ -23,6 +23,10 @@
     Small section here containing like filter, searches etc
     </section> -->
 
+    <!-- 
+        Section here like to "clear" the filter.
+    -->
+
   <main class="product-section">
     <div class="container">
       <div class="product-grid">
