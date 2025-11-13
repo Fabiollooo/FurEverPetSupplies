@@ -32,7 +32,7 @@
           <div class="product-grid">
               <?php foreach ($products as $p): ?>
                   <div class="product-card">
-                      <img src="/uploads/<?= $p['prodPhoto'] ?>" 
+                      <img src="../public/assets/images/products/thumbs/<?= $p['prodPhoto'] ?>" 
                           class="product-image" 
                           alt="<?= $p['prodDescription'] ?>">
                       <h3 class="product-name"><?= $p['prodDescription'] ?></h3>
