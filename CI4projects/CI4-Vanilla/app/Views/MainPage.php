@@ -10,7 +10,17 @@
 </head>
 <!-- Now when i think about it, i will move the contents of this version's MainPage to its own page of "About Me". 
     And instead on the main page i will have just like categories of which the user may press and then it will bring the user to the "itemshop" page with the appropiate items of the given pressed category -->
-
+<section class="hero-section">
+        <div class="container hero-content">
+        <h2>Your One-Stop Pet Supply Shop</h2>
+        <p>Everything your furry friends need — from food to toys and more.</p>
+        
+        <div class="hero-buttons">
+          <a href="<?= base_url('itemshop')?>" class="btn-shop-now">Shop Now</a>
+        </div>
+        <!-- Add maybe like a img series as a div here -->
+        </div>
+</section>
 
 <body>
   <section class="categories-section">
@@ -47,8 +57,4 @@
           </form>
       </div>
   </div>
-
-
-
-
 </body>

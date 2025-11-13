@@ -15,6 +15,10 @@ $routes->get('MainPage', 'Home2::index2');
 //AboutUs
 $routes->get('aboutUs', 'AboutUsController::index2');
 
+//DrillDown
+$routes->get('itemshop/view', 'ItemShopController::view');
+
+
 
 
 //Cart

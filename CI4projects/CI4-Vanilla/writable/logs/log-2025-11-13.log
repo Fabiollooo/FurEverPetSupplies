@@ -499,3 +499,33 @@ in APPPATH\Controllers\ItemShopController.php on line 10.
  7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-13 21:21:47 --> ErrorException: Undefined array key "prodLongDescription"
+[Method: GET, Route: itemshop/view]
+in APPPATH\Views\productView.php on line 15.
+ 1 APPPATH\Views\productView.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prodLongDescription"', 'C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\productView.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\productView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('productView', [], true)
+ 5 APPPATH\Controllers\ItemShopController.php(32): view('productView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemShopController->view()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemShopController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-13 21:22:13 --> ErrorException: Undefined array key "prodLongDescription"
+[Method: GET, Route: itemshop/view]
+in APPPATH\Views\productView.php on line 15.
+ 1 APPPATH\Views\productView.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prodLongDescription"', 'C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\productView.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\K00295775\\CI4projects\\CI4-Vanilla\\app\\Views\\productView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('productView', [], true)
+ 5 APPPATH\Controllers\ItemShopController.php(32): view('productView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemShopController->view()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemShopController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-13 21:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-13 21:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
