@@ -18,9 +18,6 @@ $routes->get('aboutUs', 'AboutUsController::index2');
 //DrillDown
 $routes->get('itemshop/view', 'ItemShopController::view');
 
-
-
-
 //Cart
 $routes->post('cart/add', 'CartController::add');
 $routes->get('cart', 'CartController::view');
@@ -34,4 +31,12 @@ $routes->post('wishlist/remove', 'WishListController::remove');
 
 //Login form
 $routes->get('loginform', 'LoginController::index2');
+
+
+
+//ADMIN STUFF
+//Products
+$routes->get('adminProducts', 'AdminProducts::index2'); 
+$routes->get('login', 'LoginController::index2'); 
+$routes->post('login/authenticate', 'LoginController::authenticate');
 

@@ -12,15 +12,15 @@
     <div class="form-login">
         <h2><center>VERY ADVANCED FORM</center></h2>
 
-        <form action="/submit" method="post">
+      <form action="<?= base_url('login/authenticate') ?>" method="post">
         
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
         <label for="pass">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" required>
 
-        <button type="submit" disabled>Submit</button>
+        <button type="submit">Submit</button>
     </form>
     </div>
 
