@@ -39,4 +39,6 @@ $routes->get('loginform', 'LoginController::index2');
 $routes->get('adminProducts', 'AdminProducts::index2'); 
 $routes->get('login', 'LoginController::index2'); 
 $routes->post('login/authenticate', 'LoginController::authenticate');
+$routes->get('logout', 'LoginController::logout');
+
 

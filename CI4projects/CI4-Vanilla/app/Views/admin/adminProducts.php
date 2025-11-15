@@ -12,6 +12,9 @@
     <?php endif; ?>
 
     <h1>All Products</h1>
+    <a href="<?= site_url('logout') ?>">Logout</a>
+
+
 
     <table>
         <tr>
