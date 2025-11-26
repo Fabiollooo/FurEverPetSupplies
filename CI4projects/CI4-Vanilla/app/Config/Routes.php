@@ -31,6 +31,11 @@ $routes->post('wishlist/remove', 'WishListController::remove');
 
 //Login form
 $routes->get('loginform', 'LoginController::index2');
+$routes->get('login', 'LoginController::index2');         
+$routes->post('register/create', 'RegisterController::create'); 
+$routes->post('login/authenticate', 'LoginController::authenticate'); 
+
+
 
 
 
