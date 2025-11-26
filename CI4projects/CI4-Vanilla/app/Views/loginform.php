@@ -17,8 +17,7 @@
 
   <div class="form-container">
     <div class="forms">
-      
-
+    
       <!-- Login Form -->
       <form action="<?= base_url('login/authenticate') ?>" method="post">
         <div class="checkbox-group">

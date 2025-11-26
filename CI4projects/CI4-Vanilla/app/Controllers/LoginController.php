@@ -10,7 +10,8 @@ class LoginController extends BaseController
     {
        
         return view('templates/header')
-             . view('loginform');
+             . view('loginform')
+             . view('templates/footer');;
     }
 
     public function authenticate()

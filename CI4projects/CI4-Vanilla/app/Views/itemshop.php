@@ -12,14 +12,6 @@
 <body>
     
 
-    <!-- <section>
-    Small section here containing like filter, searches etc
-    </section> -->
-
-    <!-- 
-        Section here like to "clear" the filter.
-    -->
-
   <main class="product-section">
     <div class="container">
       <div class="product-grid">
@@ -29,26 +21,25 @@
           <div class="product-grid">
             <?php foreach ($products as $p): ?>
                 <div class="product-card">
-                    <img src="../public/assets/images/products/thumbs/<?= $p['prodPhoto'] ?>" class="product-image" alt="<?= $p['prodDescription'] ?>">
-                        <h3 class="product-name"><?= $p['prodDescription'] ?></h3>
-                        <p class="product-price">€<?= $p['prodSalePrice'] ?></p>
+                  <img src="../public/assets/images/products/thumbs/<?= $p['prodPhoto'] ?>" class="product-image" alt="<?= $p['prodDescription'] ?>">
+                  <h3 class="product-name"><?= $p['prodDescription'] ?></h3>
+                  <p class="product-price">€<?= $p['prodSalePrice'] ?></p>
 
-                        <form action="<?= base_url('cart/add') ?>" method="post" style="display:inline-block;">
-                            <input type="hidden" name="product_id" value="<?= $p['prodCode'] ?>">
-                            <button type="submit" class="btn-add-to-cart">Add to Cart</button>
-                        </form>
+                  <div class="product-buttons">
+                    <form action="<?= base_url('cart/add') ?>" method="post">
+                        <input type="hidden" name="product_id" value="<?= $p['prodCode'] ?>">
+                        <button type="submit" class="btn-add-to-cart">Add to Cart</button>
+                    </form>
 
-                        <form action="<?= base_url('wishlist/add') ?>" method="post" style="display:inline-block;">
-                            <input type="hidden" name="product_id" value="<?= $p['prodCode'] ?>">
-                            <button type="submit" class="btn-add-to-wishlist">♡</button>
-                        </form>
+                    <form action="<?= base_url('wishlist/add') ?>" method="post">
+                        <input type="hidden" name="product_id" value="<?= $p['prodCode'] ?>">
+                        <button type="submit" class="btn-add-to-wishlist">♡</button>
+                    </form>
 
-                        <a href="<?= base_url('itemshop/view') ?>?code=<?= $p['prodCode'] ?>" class="btn-add-to-cart">View</a>
-
-
-                        
-
+                    <a href="<?= base_url('itemshop/view') ?>?code=<?= $p['prodCode'] ?>" class="btn-view-product">View</a>
                 </div>
+
+              </div>
             <?php endforeach; ?>
 
           </div>

@@ -12,7 +12,7 @@
     <?php endif; ?>
 
     <h1>All Products</h1>
-    <a href="<?= site_url('logout') ?>">Logout</a>
+    <!-- <a href="<?= site_url('logout') ?>">Logout</a> -->
 
 
 
@@ -38,10 +38,14 @@
             <td><?= $p['prodBuyCost'] ?></td>
             <td><?= $p['prodSalePrice'] ?></td>
             <td class="action-col">
-                <button>Edit</button>
-                <button class="delete-btn">Delete</button>
-                <!-- Buttons are not functionable yet -->
+                <a href="<?= site_url('adminProducts/edit/'.$p['prodCode']) ?>">
+                    <button>Edit</button>
+                </a>
+                <a href="<?= site_url('adminProducts/delete/'.$p['prodCode']) ?>" onclick="return confirm('Are you sure you want to delete this product?')">
+                    <button class="delete-btn">Delete</button>
+                </a>
             </td>
+
         </tr>
         <?php endforeach; ?>
     </table>
