@@ -10,10 +10,32 @@
 
 <body>
   <section class="hero-section">
-    <div class="container hero-content">
+   
+    <div class="carousel-container">
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+    </div>
+    
+    
+    <div class="carousel-overlay"></div>
+    
+   
+    <div class="hero-content">
       <h2>Your One-Stop Pet Supply Shop</h2>
       <p>Everything your furry friends need — from food to toys and more.</p>
       <a href="<?= base_url('itemshop')?>" class="btn-shop-now">Shop Now</a>
+    </div>
+    
+   
+    <div class="carousel-indicators">
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
     </div>
   </section>
 

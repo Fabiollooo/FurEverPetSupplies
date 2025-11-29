@@ -8,19 +8,36 @@
   <link rel="stylesheet" href="../public/assets/styles/style.css">
   
 </head>
-<!-- Now when i think about it, i will move the contents of this version's MainPage to its own page of "About Me". 
-    And instead on the main page i will have just like categories of which the user may press and then it will bring the user to the "itemshop" page with the appropiate items of the given pressed category -->
-<section class="hero-section">
-        <div class="container hero-content">
-        <h2>Your One-Stop Pet Supply Shop</h2>
-        <p>Everything your furry friends need — from food to toys and more.</p>
-        
-        <div class="hero-buttons">
-          <a href="<?= base_url('itemshop')?>" class="btn-shop-now">Shop Now</a>
-        </div>
-        <!-- Add maybe like a img series as a div here -->
-        </div>
-</section>
+
+  <section class="hero-section">  
+   
+    <div class="carousel-container">
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+    </div>
+    
+    <!-- NOTEL: All of these pictures are also all taken by me. -->
+    <div class="carousel-overlay"></div>
+    
+   
+    <div class="hero-content">
+      <h2>Your One-Stop Pet Supply Shop</h2>
+      <p>Everything your furry friends need — from food to toys and more.</p>
+      <a href="<?= base_url('itemshop')?>" class="btn-shop-now">Shop Now</a>
+    </div>
+    
+   
+    <div class="carousel-indicators">
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+  </section>
 
 <body>
   <section class="categories-section">
@@ -41,20 +58,64 @@
  
   <div class="form_contactME" id="contactMe_section">
     <div class="form_container">    
-      <h2><center>Contact Us!</center></h2>    
-          <form action="https://formsubmit.co/13e5f2c2b4c05db14cc10a435d59b30e" method="POST">
-            <input type="hidden" name="_next" value="/">
-              <input type="hidden" name="_captcha" value="false">
+        <h1><center>Contact Us!</center></h1>
+        <div class="contact-wrapper">
+            
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="icon">📍</i>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Co. Limerick, Ireland</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon">📧</i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>info@fureverpets.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon">📞</i>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+353 1 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon">🕒</i>
+                        <div>
+                            <strong>Opening Hours</strong>
+                            <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div class="contact-form">
+                <form action="https://formsubmit.co/13e5f2c2b4c05db14cc10a435d59b30e" method="POST">
+                    <input type="hidden" name="_next" value="/">
+                    <input type="hidden" name="_captcha" value="false">
 
-              <p><input class="input-box" type="text" name="fname" id="name" placeholder="Name" autocomplete="off" required></p>
-              <p><input class="input-box" type="email" name="email" id="email" placeholder="E-mail" required></p>
-              <p><input class="input-box" type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" required></p>
-              <textarea class="input-box" id="comment" name="query" placeholder="Enter your comment" required></textarea>
-              <p>
-                <input type="submit" value="Submit" id="submit-btn">
-                <input type="reset">
-              </p>
-          </form>
-      </div>
-  </div>
+                    <div class="form-row">
+                        <input class="input-box" type="text" name="fname" id="name" placeholder="Name" autocomplete="off" required>
+                        <input class="input-box" type="email" name="email" id="email" placeholder="E-mail" required>
+                    </div>
+                    <input class="input-box" type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" required>
+                    <textarea class="input-box" id="comment" name="query" placeholder="Enter your comment" required></textarea>
+                    <div class="form-buttons">
+                        <input type="submit" value="Submit" id="submit-btn">
+                        <input type="reset" value="Clear">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>

@@ -18,7 +18,7 @@
                 <li><a href="<?= base_url('/') ?>">Home</a></li>
                 <li><a href="<?= base_url('aboutUs') ?>">About Us</a></li>
                 <li><a href="<?= base_url('itemshop') ?>">Shop</a></li>
-                <li><a href="<?= base_url('MainPage') ?>#form_contactME">Contact</a></li>
+                <!-- <li><a href="<?= base_url('MainPage') ?>#form_contactME">Contact</a></li> CodeIgniter not allowing-->
             </ul>
         </nav>
 
