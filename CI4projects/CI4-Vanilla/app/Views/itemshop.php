@@ -84,8 +84,8 @@
       </section>
     </div>
   </main>
-  <!-- Add the possible item view limiter/ items viewed per page -->
-   <!-- Add a possible msg saying "Successfully added the item to cart/wishlist"-->
+ 
+
 
 </body>
 </html>

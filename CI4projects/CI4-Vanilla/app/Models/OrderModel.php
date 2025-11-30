@@ -5,14 +5,14 @@ use CodeIgniter\Model;
 class OrderModel extends Model
 {
     protected $table = 'orders';
-    protected $primaryKey = 'orderNumber';
+    protected $primaryKey = 'oOrderNumber';  
     protected $returnType = 'array';
     protected $allowedFields = [
-        'orderDate',
-        'requiredDate', 
-        'shippedDate',
-        'status',
-        'comments',
-        'customerNumber'
+        'oOrderDate',
+        'oRequiredDate', 
+        'oShippedDate',
+        'oStatus',
+        'oComments',
+        'oCustomerNumber'
     ];
 }

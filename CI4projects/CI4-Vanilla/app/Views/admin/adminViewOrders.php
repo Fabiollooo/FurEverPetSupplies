@@ -22,6 +22,7 @@
             <th>Status</th>
             <th>Comments</th>
             <th>Customer Number</th>
+            <th class="action-col">Actions</th>
         </tr>
 
         <?php foreach ($orders as $o): ?>
@@ -33,6 +34,11 @@
             <td><?= $o['oStatus'] ?></td>
             <td><?= $o['oComments'] ?></td>
             <td><?= $o['oCustomerNumber'] ?></td>
+             <td class="action-col">
+                <a href="<?= site_url('adminViewOrders/edit/'.$o['oOrderNumber']) ?>">
+                    <button class="edit-btn">Edit</button>
+                </a>
+            </td>
         </tr>
         <?php endforeach; ?>
     </table>
