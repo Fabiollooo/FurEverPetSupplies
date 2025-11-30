@@ -39,6 +39,20 @@
     </div>
   </section>
 
+  <section class="welcome-section">
+    <div class="welcome-container">
+      <h2 class="welcome-title">Welcome to Furever Pet Supplies!</h2>
+      <p class="welcome-subtitle">Your trusted partner in pet care for all your furry, feathery, and scaly friends</p>
+      <div class="welcome-content">
+        <p>Hello and welcome to Furever Pet Supplies! We're absolutely thrilled to have you here. As fellow pet lovers, we understand that your pets aren't just animals - they're family. That's why we've dedicated ourselves to providing only the <span class="welcome-highlight">highest quality products</span> for all your pet care needs.</p>
+        
+        <p>Whether you're shopping for a playful puppy, a curious kitten, chirpy birds, or aquatic friends, we've got everything you need to keep them happy, healthy, and thriving. Our carefully curated selection includes premium foods, engaging toys, comfortable accessories, and specialized care products for all types of pets.</p>
+        
+        <p>At Furever Pet Supplies, we believe that every pet deserves the very best. Our team of pet experts is passionate about helping you find exactly what you need to give your companion the wonderful life they deserve. Thank you for choosing us as your pet supply partner - we're honored to be part of your pet care journey!</p>
+      </div>
+    </div>
+  </section>
+
 <body>
   <section class="categories-section">
     <h2 class="categories-title">Shop by Category</h2>
