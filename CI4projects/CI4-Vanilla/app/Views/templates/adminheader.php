@@ -11,7 +11,9 @@
 
 <header class="site-header">
     <div class="container header-container">
-        <img src="../public/assets/images/site/logo.png" alt="logo" class="store-logo">
+        <a href="<?= base_url('adminProducts') ?>" class="logo-link">
+            <img src="../public/assets/images/site/logo.png" alt="logo" class="store-logo">
+        </a>
 
         <nav class="main-navigation">
             <ul class="nav-list">
