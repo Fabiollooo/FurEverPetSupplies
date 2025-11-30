@@ -12,7 +12,7 @@ class AdminProducts extends BaseController
         $session = session();
         $data['adminFirstName'] = $session->get('adminFirstName');
 
-        return view('templates/header') 
+        return view('templates/adminheader') 
                 . view('admin/adminProducts', $data); 
     }
 
@@ -21,7 +21,7 @@ class AdminProducts extends BaseController
         $model = new ProductModel();
         $data['product'] = $model->find($prodCode);
 
-        return view('templates/header')
+        return view('templates/adminheader')
                . view('admin/adminEditProduct', $data);
     }
 
