@@ -43,7 +43,7 @@
                 </a>
                 <a href="<?= site_url('adminProducts/delete/'.$p['prodCode']) ?>" onclick="return confirm('Are you sure you want to delete this product?')">
                     <button class="delete-btn">Delete</button>
-                    <!-- Font-end only deletion, since some items are foeign key releted hence their deletion is more difficult -->
+                   
                 </a>
             </td>
 

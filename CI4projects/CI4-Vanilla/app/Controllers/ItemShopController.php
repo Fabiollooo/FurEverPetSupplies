@@ -8,13 +8,26 @@ class ItemShopController extends BaseController
     public function index2()
     {
         $category = $this->request->getGet('category'); 
+        $page = $this->request->getGet('page') ?: 1; 
         $model = new ProductModel();
 
         if ($category) {
-            $data['products'] = $model->where('prodCategory', $category)->findAll();
+            $products = $model->where('prodCategory', $category)->findAll();
         } else {
-            $data['products'] = $model->findAll();
+            $products = $model->findAll();
         }
+
+        
+        $perPage = 12;
+        $totalProducts = count($products);
+        $totalPages = ceil($totalProducts / $perPage);
+        
+        
+        $start = ($page - 1) * $perPage;
+        $data['products'] = array_slice($products, $start, $perPage);
+        $data['currentPage'] = (int)$page;
+        $data['totalPages'] = $totalPages;
+        $data['category'] = $category; 
 
         return view('templates/header')
              . view('itemshop', $data)
@@ -27,6 +40,11 @@ class ItemShopController extends BaseController
         $code = $this->request->getGet('code'); 
         $model = new ProductModel();
         $data['product'] = $model->where('prodCode', $code)->first();
+
+        if (!$data['product']) {
+           
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
 
         return view('templates/header')
              . view('productView', $data)

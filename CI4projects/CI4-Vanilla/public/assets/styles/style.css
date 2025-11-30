@@ -57,6 +57,29 @@
     .welcome-highlight {
       color: #ff7f50;
       font-weight: 600;
+    }
+
+    .pagination {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .pagination a {
+        padding: 8px 16px;
+        margin: 0 5px;
+        background: #ff7f50;
+        text-decoration: none;
+        color: #333;
+        border-radius: 4px;
+    }
+
+    .pagination a:hover {
+        background: lightsalmon;
+    }
+
+    .pagination span {
+        padding: 8px 16px;
+        margin: 0 5px;
 }
 
 
