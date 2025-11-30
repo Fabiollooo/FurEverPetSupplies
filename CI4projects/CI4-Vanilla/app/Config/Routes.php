@@ -44,6 +44,7 @@ $routes->post('login/authenticate', 'LoginController::authenticate');
 $routes->get('adminProducts', 'AdminProducts::index2');
 $routes->get('adminProducts/edit/(:any)', 'AdminProducts::edit/$1');
 $routes->post('adminProducts/update/(:any)', 'AdminProducts::update/$1');
+$routes->get('adminProducts/sale/(:any)', 'AdminProducts::sale/$1');
 $routes->get('adminProducts/delete/(:any)', 'AdminProducts::delete/$1');
 
 $routes->get('login', 'LoginController::index2');

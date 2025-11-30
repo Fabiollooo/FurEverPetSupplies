@@ -1031,5 +1031,74 @@
     h1 {
       font-family: Arial, sans-serif;
       margin-bottom: 15px;
-}
+    }
 
+    .sale-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .sale-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .sale-options {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    .sale-options a {
+        color: black;
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sale-options a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .sale-dropdown:hover .sale-options {
+        display: block;
+    }
+
+    .delete-btn {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
+
+    .action-col a {
+        margin: 0 2px;
+    }
+
+    .edit-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .edit-btn:hover {
+        background-color: #0056b3;
+}

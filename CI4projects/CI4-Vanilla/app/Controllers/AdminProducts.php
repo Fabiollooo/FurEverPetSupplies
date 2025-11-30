@@ -43,10 +43,29 @@ class AdminProducts extends BaseController
         return redirect()->to('/adminProducts')->with('message', 'Product updated.');
     }
 
+        public function sale($prodCode)
+    {
+        $model = new ProductModel();
+        $product = $model->find($prodCode);
+        
+        if (!$product) {
+            return redirect()->to('/adminProducts')->with('error', 'Product not found!');
+        }
+
+        
+        $discount = 0.20; 
+        $newPrice = $product['prodSalePrice'] * (1 - $discount);
+        
+        $model->update($prodCode, ['prodSalePrice' => $newPrice]);
+        
+        return redirect()->to('/adminProducts')->with('success', '20% discount applied to ' . $product['prodDescription'] . '! New price: €' . number_format($newPrice, 2));
+    }
+
     public function delete($prodCode)
     {
         $db = \Config\Database::connect();
         $db->table('orderdetail')->where('odProductCode', $prodCode)->delete();
+    
 
         $model = new ProductModel();
         $model->delete($prodCode);
