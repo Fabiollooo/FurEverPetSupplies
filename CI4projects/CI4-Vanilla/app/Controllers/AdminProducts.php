@@ -7,10 +7,21 @@ class AdminProducts extends BaseController
     public function index2()
     {
         $model = new ProductModel();
-        $data['products'] = $model->findAll();
+        $search = $this->request->getGet('search');
 
-        $session = session();
-        $data['adminFirstName'] = $session->get('adminFirstName');
+            if ($search) {
+             
+                $data['products'] = $model->like('prodCode', $search)
+                                        ->orLike('prodDescription', $search)
+                                        ->orLike('prodCategory', $search)
+                                        ->orLike('prodSupplier', $search)
+                                        ->findAll();
+            } else {
+                $data['products'] = $model->findAll();
+            }
+
+            $session = session();
+            $data['adminFirstName'] = $session->get('adminFirstName');
 
         return view('templates/adminheader') 
                 . view('admin/adminProducts', $data); 

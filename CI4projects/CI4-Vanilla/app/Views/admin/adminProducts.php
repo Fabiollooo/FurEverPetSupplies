@@ -12,7 +12,17 @@
     <?php endif; ?>
 
     <h1>All Products</h1>
-    <!-- <a href="<?= site_url('logout') ?>">Logout</a> -->
+
+    <form method="get" action="<?= site_url('adminProducts') ?>" class="search-form">
+        <input type="text" name="search" placeholder="Search products..." 
+               value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>" 
+               class="search-input">
+               
+        <button type="submit" class="search-btn">Search</button>
+        <?php if(isset($_GET['search']) && !empty($_GET['search'])): ?>
+            <a href="<?= site_url('adminProducts') ?>" class="clear-search">Clear</a>
+        <?php endif; ?>
+    </form>
 
 
 
@@ -66,6 +76,6 @@
     </table>
 </body>
 </html>
-<!-- I plan to add like a Admin dashboard where he has the options to view customer/orders/staff/products -->
+
 
 

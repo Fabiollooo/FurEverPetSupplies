@@ -9,12 +9,20 @@ class ItemShopController extends BaseController
     {
         $category = $this->request->getGet('category'); 
         $page = $this->request->getGet('page') ?: 1; 
+        $search = $this->request->getGet('search'); 
         $model = new ProductModel();
 
         if ($category) {
             $products = $model->where('prodCategory', $category)->findAll();
         } else {
             $products = $model->findAll();
+        }
+
+        if ($search) {
+        $products = array_filter($products, function($product) use ($search) {
+            return stripos($product['prodDescription'], $search) !== false ||
+                   stripos($product['prodCategory'], $search) !== false;
+        });
         }
 
         

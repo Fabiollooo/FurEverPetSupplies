@@ -1101,4 +1101,38 @@
 
     .edit-btn:hover {
         background-color: #0056b3;
+    }
+
+    .search-form {
+    margin: 20px 0;
+    }
+
+    .search-input {
+        padding: 8px;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .search-btn {
+        padding: 8px 15px;
+        background-color: #ff7f50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .search-btn:hover {
+        background-color: lightsalmon;
+    }
+
+    .clear-search {
+        margin-left: 10px;
+        color: #dc3545;
+        text-decoration: none;
+    }
+
+    .clear-search:hover {
+        text-decoration: underline;
 }

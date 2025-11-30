@@ -13,7 +13,35 @@
    <main class="product-section">
     <div class="container">
       <section class="product-section">
-        <h2 class="section-title">Our Products</h2>
+        <h1 class="section-title" style="font-size: 3em">Our Products</h1>
+        
+        <section class="categories-section">
+        <h2 class="categories-title">Shop by Category</h2>
+        <div class="categories-grid">
+          <a href="itemshop?category=Accessories"><div class="category-card" id="accessory">Accessories</div></a>
+          <a href="itemshop?category=Birds"><div class="category-card" id="bird">Birds</div></a>
+          <a href="itemshop?category=Cats"><div class="category-card" id="cat">Cats</div></a>
+          <a href="itemshop?category=Dogs"><div class="category-card" id="dog">Dogs</div></a>
+          <a href="itemshop?category=Fish"><div class="category-card" id="fish">Fish</div></a>
+          <a href="itemshop?category=PetFood"><div class="category-card" id="petfood">Pet Food</div></a>
+          <a href="itemshop?category=Reptile"><div class="category-card" id="reptile">Reptile</div></a>
+          <a href="itemshop?category=Toys"><div class="category-card" id="toys">Toys</div></a>
+          <a href="itemshop?category=Treats"><div class="category-card" id="treats">Treats</div></a>
+        </div>
+      </section>
+
+      <form method="get" action="<?= base_url('itemshop') ?>" class="search-form">
+        <input type="text" name="search" placeholder="Search products..." 
+                   value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>" 
+                   class="search-input">
+            <button type="submit" class="search-btn">Search</button>
+            <?php if(isset($_GET['search']) && !empty($_GET['search'])): ?>
+                <a href="<?= base_url('itemshop') ?>" class="clear-search">Clear</a>
+            <?php endif; ?>
+        </form>
+
+
+
         <div class="product-grid">
           <?php foreach ($products as $p): ?>
             <div class="product-card">
