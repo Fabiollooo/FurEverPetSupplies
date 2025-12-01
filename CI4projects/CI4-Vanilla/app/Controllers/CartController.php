@@ -8,7 +8,7 @@ class CartController extends BaseController
 {
    
 
-        public function add()
+    public function add()
     {
         $session = session();
         $productId = $this->request->getPost('product_id');
@@ -17,12 +17,13 @@ class CartController extends BaseController
 
         if (!in_array($productId, $cart)) {
             $cart[] = $productId;
-        }
-
-        $session->set('cart', $cart);
-
+            $session->set('cart', $cart);
         
-        return redirect()->to('/');
+            return redirect()->to('/')->with('success', 'Product added to cart!');
+        } else {
+           
+            return redirect()->to('/')->with('info', 'Product already in cart');
+        }
     }
 
     public function view()
@@ -52,16 +53,16 @@ class CartController extends BaseController
         $productId = $this->request->getPost('product_id');
 
         $cart = $session->get('cart') ?? [];
-
         
         $key = array_search($productId, $cart);
         if ($key !== false) {
             unset($cart[$key]);
             $cart = array_values($cart); 
+            $session->set('cart', $cart);
+          
+            return redirect()->back()->with('success', 'Product removed from cart');
         }
-
-        $session->set('cart', $cart);
-
+        
         return redirect()->back();
     }
 }

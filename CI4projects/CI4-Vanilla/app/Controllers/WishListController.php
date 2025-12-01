@@ -35,11 +35,13 @@ class WishlistController extends BaseController
         $wishlist = $session->get('wishlist') ?? [];
         if (!in_array($productId, $wishlist)) {
             $wishlist[] = $productId;
+            $session->set('wishlist', $wishlist);
+          
+            return redirect()->back()->with('success', 'Added to wishlist!');
+        } else {
+            
+            return redirect()->back()->with('info', 'Already in wishlist');
         }
-
-        $session->set('wishlist', $wishlist);
-
-        return redirect()->back();
     }
 
     public function remove()
@@ -51,9 +53,10 @@ class WishlistController extends BaseController
         if (($key = array_search($productId, $wishlist)) !== false) {
             unset($wishlist[$key]);
             $wishlist = array_values($wishlist);
+            $session->set('wishlist', $wishlist);
+            
+            return redirect()->back()->with('success', 'Removed from wishlist');
         }
-
-        $session->set('wishlist', $wishlist);
 
         return redirect()->back();
     }
